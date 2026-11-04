@@ -23,6 +23,17 @@ jobs:
         run: python3 -m compileall -q scripts tests
       - name: Validate skill links, decisions, routing files and evaluation cases
         run: python3 scripts/validate_skill.py
-      - name: Run offline unit tests
+      - name: Run offline unit tests, including Claude.ai ZIP structure tests
         run: python3 -m unittest discover -s tests -p "test_*.py" -v
-# No deployment, publication or secret-bearing steps.
+      - name: Build and inspect Claude.ai Custom Skill ZIP
+        run: |
+          python3 scripts/build_claude_ai_skill.py --output dist/noslop-claude-ai.zip
+          unzip -l dist/noslop-claude-ai.zip
+      - name: Store reviewable ZIP as CI artifact (not release/deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: noslop-claude-ai-review
+          path: dist/noslop-claude-ai.zip
+          if-no-files-found: error
+          retention-days: 14
+# No marketplace release, live deployment or external publish steps.

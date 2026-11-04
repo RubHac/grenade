@@ -1,11 +1,7 @@
 ---
 name: noslop
 description: >-
-  Create or improve reader-centered decision pages, reports, dashboards,
-  guides, presentations, tools and reference sheets. Choose the output format
-  requested by the user; route through the relevant workflow and load only
-  the deeper guidance needed. Use for artifact creation, repair, and web
-  implementation when requested.
+  Creates and repairs decision briefs, reports, dashboards, guides, slides and tools. Use for clear, accurate, reader-focused artifacts in the requested format while preserving essential facts.
 ---
 
 # No slop — Level 1 router
