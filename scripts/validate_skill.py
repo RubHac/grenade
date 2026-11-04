@@ -84,7 +84,7 @@ def main():
         token = "R%02d" % index
         rows = [line for line in decision_text.splitlines() if line.startswith("| " + token + " |")]
         check("Owner decision " + token + " approved", len(rows) == 1 and "APPROVED" in rows[0])
-    check("Decisions retain no-merge/no-publish gate", "do not merge or publish" in decision_text.lower())
+    check("Merge authorization recorded without deployment approval", "Merge approval for PR #1" in decision_text and "No permission has been granted to deploy" in decision_text)
 
     scenarios = []
     if SCENARIOS.exists():

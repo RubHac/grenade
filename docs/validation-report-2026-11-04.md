@@ -39,4 +39,4 @@ Use [scenarios.jsonl](../evals/scenarios.jsonl) and [evaluation-rubric.md](../ev
 
 ## Decision boundary
 
-**No merge or publication authorized.** Revisit after real model, output-format and browser evaluations; obtain separate owner approval for merging and for any live deployment.
+**Merge approval recorded:** on 2026-11-04, the owner expressly authorized merging PR #1 despite pending model/browser/format-specific evaluations. This is code-integration approval, **not** live deployment or marketplace publication approval. Those still require separate explicit authorization and jointly agreed security.

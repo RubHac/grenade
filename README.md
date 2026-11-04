@@ -32,7 +32,7 @@ HTML examples from the upstream project remain in [`examples/`](examples/). They
 
 ## Development status
 
-The changes are being prepared in a **draft pull request**. They are not merged into `main` and are not published or deployed. Installation and marketplace release metadata will be considered only at a separately approved release stage.
+The owner **authorized merging PR #1 into `main` on 2026-11-04**. This authorization does **not** cover a hosted deployment, marketplace release or external distribution. End-to-end model A/B evaluations, browser QA and token-consumption measurements remain pending. Plugin installation and marketplace release metadata require a separately approved release stage.
 
 ## Attribution
 
