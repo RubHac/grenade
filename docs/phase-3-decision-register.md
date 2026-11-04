@@ -1,4 +1,4 @@
-# Phase 3 — owner decision register (PARTIALLY APPROVED)
+# Phase 3 — owner decision register (ALL 10 POLICY DECISIONS APPROVED; IMPLEMENTATION PENDING)
 
 This register prepares, but does not implement, policy decisions.
 
@@ -13,6 +13,6 @@ This register prepares, but does not implement, policy decisions.
 | R07 | Rebuild usually required, ~50% word reduction | **APPROVED — relax:** Choose targeted edits vs. rebuilding based on defect severity and reader needs; do not mandate ~50% text reduction or visibly different structure. Preserve all material information and factual integrity. Approved 2026-11-04. |
 | R08 | Vercel passcode called 'private by default' | **APPROVED — replace:** Do not publish or deploy any artifact without the owner's explicit approval, and jointly select/approve the authentication and security mechanism before publishing. No default automatic deployment or assumption that a shared passcode is adequate. Approved 2026-11-04. |
 | R09 | Three reader questions, ask nothing else | **APPROVED — relax:** Use the three reader questions as an intake baseline, not a strict maximum. Ask additional questions only when material information is missing; never re-ask information already supplied. Approved 2026-11-04. |
-| R10 | Compress visually while preserving every material detail | Agree precedence and evaluation rules? |
+| R10 | Compress visually while preserving every material detail | **APPROVED — clarify priority:** First preserve factual accuracy and all material, decision-relevant information; next optimize clarity; then brevity and visual design. Peripheral/nonmaterial content may be omitted to improve brevity and presentation. If strict R03/R04 constraints conflict with preserving material information, ask the owner for a decision rather than silently omitting it. Approved 2026-11-04. |
 
-Decisions must be recorded as **keep, relax, or replace**, with rationale and approved wording before any corresponding edits. R01, R02, R03, R04, and R05 approved on 2026-11-04; implementation is deferred while other decisions are discussed. All undecided rules remain intact.
+All ten policy decisions R01–R10 were approved in the owner discussion on 2026-11-04. **These are recorded decisions only; implementation in the runtime skill remains pending explicit approval of the consolidated change set.** Do not merge the draft PR before review and approval.
