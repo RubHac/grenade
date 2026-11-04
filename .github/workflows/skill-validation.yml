@@ -19,8 +19,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Compile all offline Python tools and tests
+        run: python3 -m compileall -q scripts tests
       - name: Validate skill links, decisions, routing files and evaluation cases
         run: python3 scripts/validate_skill.py
-      - name: Run offline HTML checker unit tests
+      - name: Run offline unit tests
         run: python3 -m unittest discover -s tests -p "test_*.py" -v
 # No deployment, publication or secret-bearing steps.
