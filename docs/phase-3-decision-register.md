@@ -11,7 +11,7 @@ This register prepares, but does not implement, policy decisions.
 | R05 | 2-line paragraph and 10-word table cell | **APPROVED — relax:** Treat the 2-line paragraph and 10-word table-cell limits as readability guidelines, not hard limits. Preserve clarity and scannability; allow longer text when needed for meaning. Approved 2026-11-04. |
 | R06 | Claude's visual identity and five text sizes | **APPROVED — relax:** Use Claude's design language as the default; honor explicit user preferences or enterprise branding, including theme, palette, typography, and sizing as needed. Approved 2026-11-04. |
 | R07 | Rebuild usually required, ~50% word reduction | **APPROVED — relax:** Choose targeted edits vs. rebuilding based on defect severity and reader needs; do not mandate ~50% text reduction or visibly different structure. Preserve all material information and factual integrity. Approved 2026-11-04. |
-| R08 | Vercel passcode called 'private by default' | Define enterprise security baseline? |
+| R08 | Vercel passcode called 'private by default' | **APPROVED — replace:** Do not publish or deploy any artifact without the owner's explicit approval, and jointly select/approve the authentication and security mechanism before publishing. No default automatic deployment or assumption that a shared passcode is adequate. Approved 2026-11-04. |
 | R09 | Three reader questions, ask nothing else | Allow essential contextual clarification? |
 | R10 | Compress visually while preserving every material detail | Agree precedence and evaluation rules? |
 
