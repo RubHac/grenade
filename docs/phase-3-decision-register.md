@@ -7,7 +7,7 @@ This register prepares, but does not implement, policy decisions.
 | R01 | Always plain HTML; priority over other formats | **APPROVED — replace:** Honor the user's explicitly requested output format. If none is specified, select the best-fit format or clarify if needed. |
 | R02 | Each section must start with a visual | **APPROVED — relax:** Use visualization only when it adds comprehension value; do not require a visual in every section. |
 | R03 | Hard limits: 4 sections, 5 items, 1 table | **APPROVED — keep strict:** Retain the current hard limits: at most 4 sections under the first screen, at most 5 items per card/list, and at most 1 table. No adaptive relaxation. Approved 2026-11-04. |
-| R04 | First-screen 50–120 words | Strict or context dependent? |
+| R04 | First-screen 50–120 words | **APPROVED — keep strict:** The first-screen word-count range of 50–120 words remains mandatory, preserving the original source's stated exceptions (e.g. one-page reference sheet) and header-line exclusion. Approved 2026-11-04. |
 | R05 | 2-line paragraph and 10-word table cell | Strict or readability heuristic? |
 | R06 | Claude's visual identity and five text sizes | Allow user and enterprise brand themes? |
 | R07 | Rebuild usually required, ~50% word reduction | Preserve working structure when suitable? |
@@ -15,4 +15,4 @@ This register prepares, but does not implement, policy decisions.
 | R09 | Three reader questions, ask nothing else | Allow essential contextual clarification? |
 | R10 | Compress visually while preserving every material detail | Agree precedence and evaluation rules? |
 
-Decisions must be recorded as **keep, relax, or replace**, with rationale and approved wording before any corresponding edits. R01, R02, and R03 approved on 2026-11-04; implementation is deferred while other decisions are discussed. All undecided rules remain intact.
+Decisions must be recorded as **keep, relax, or replace**, with rationale and approved wording before any corresponding edits. R01, R02, R03, and R04 approved on 2026-11-04; implementation is deferred while other decisions are discussed. All undecided rules remain intact.
