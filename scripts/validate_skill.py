@@ -84,7 +84,7 @@ def main():
         token = "R%02d" % index
         rows = [line for line in decision_text.splitlines() if line.startswith("| " + token + " |")]
         check("Owner decision " + token + " approved", len(rows) == 1 and "APPROVED" in rows[0])
-    check("Decisions not yet merged or published", "Do not merge or publish" in decision_text)
+    check("Decisions retain no-merge/no-publish gate", "do not merge or publish" in decision_text.lower())
 
     scenarios = []
     if SCENARIOS.exists():
