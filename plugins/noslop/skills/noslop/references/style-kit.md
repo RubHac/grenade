@@ -1,13 +1,13 @@
-<!-- Original SKILL.md section 7; unchanged. Source commit 43809893c60746bdbe95c7fadb5db812b4022c51. -->
+<!-- Adapted for approved R01/R06. CSS applies when HTML/web output is selected; not a requirement for non-web formats. -->
 
 ## 7. Style kit
 
-Start every page from this. Add only what the page needs.
+This is the **default visual theme when the output medium supports it**, not a universal format requirement. Use requested brand/theme instead when explicitly supplied. Add only what the page needs.
 
 - **Fonts:** serif for the title and section headings, like Claude's greeting. Sans for everything else.
-- **Sizes:** only 5. 40px big numbers, 32px title, 22px section headings, 16px text, 13px labels.
+- **Default size scale:** 40px big numbers, 32px title, 22px section headings, 16px body, 13px labels. Adapt sizes to the user's brand requirements and accessibility needs.
 - **Charts:** inline SVG or Chart.js. The bar or line that matters in clay, the rest in gray.
-- **Icons:** simple line icons drawn in SVG, in gray or clay. Never emoji.
+- **Default icons:** simple line icons drawn in SVG, in gray or clay. Use the requested design system when supplied; avoid decorative emoji icons.
 - **Nothing spills out of its box.** You can't see the page you build, so use layouts that can't break. No grid with more than 6 columns: a week of 10 days becomes a list or a timeline that wraps. Never a pill, a tag or `white-space: nowrap` inside a box narrower than 200px. A number in a tile fits on one line at every width ("$400", with "was $200" as its tag, never "$200 → $400"). Every box grows with its content. Picture it at 1440px and at 400px wide: if any text could overflow, overlap or wrap mid-number, change the layout.
 
 ```css

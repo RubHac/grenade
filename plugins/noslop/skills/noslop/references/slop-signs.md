@@ -1,10 +1,10 @@
-<!-- Original SKILL.md section 4; unchanged. Source commit 43809893c60746bdbe95c7fadb5db812b4022c51. -->
+<!-- Original anti-patterns, adapted to R02/R05/R06/R07. See design-rules.md for authoritative current decisions. -->
 
 ## 4. Slop signs
 
 Never ship a page with these:
 
-- Paragraphs and bullet lists where a number, a chart or a diagram would show it.
+- Paragraphs and bullet lists where an accurate chart or diagram would make the meaning substantially clearer; do not force visuals without value.
 - No header: the reader can't tell what this is, who sent it, or why.
 - Clever headings ("Candidates in play", "The road ahead") instead of plain sentences.
 - A subtitle or helper text under every heading, a caption under every number, a note under every card title.
@@ -20,10 +20,10 @@ Never ship a page with these:
 - Walls of text: long paragraphs, tables full of sentences, a dozen rows that look the same.
 - A change with nothing to compare it to: "+12%" instead of "+12% vs September".
 - A row of identical cards, each with its own little chart. Use one main chart, with plain numbers around it.
-- A look that isn't Claude's: blue buttons, new fonts, many text sizes, gradients, emoji as icons.
+- An incoherent, inaccessible or inconsistent theme; an explicitly requested user/enterprise brand takes precedence over the Claude default.
 - One long scroll that tries to hold everything.
 - Badges, pills or numbers (01, 02, 03) that carry no information.
 - Text or pills spilling out of their boxes, a big number broken onto 2 lines, a grid of 10 narrow columns.
 - The same list shown twice: a calendar and a table, cards and a table.
 - More than 4 sections, cards with 6+ items, or 2+ tables: a dossier, not a page.
-- A "fixed" page that looks like the old one: same sections, same order, same boxes.
+- A claimed fix that leaves substantive usability, content or functionality defects unresolved. A targeted fix may legitimately preserve the original layout.

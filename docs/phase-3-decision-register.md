@@ -1,6 +1,6 @@
-# Phase 3 — owner decision register (ALL 10 POLICY DECISIONS APPROVED; IMPLEMENTATION PENDING)
+# Phase 3 — owner decision register (ALL 10 DECISIONS APPROVED; IMPLEMENTED IN DRAFT BRANCH FOR VALIDATION)
 
-This register prepares, but does not implement, policy decisions.
+These decisions are approved and incorporated into the modular runtime skill on the draft branch. Validation and release gates remain separate.
 
 | ID | Existing rule or restriction | Owner discussion |
 |---|---|---|
@@ -15,4 +15,4 @@ This register prepares, but does not implement, policy decisions.
 | R09 | Three reader questions, ask nothing else | **APPROVED — relax:** Use the three reader questions as an intake baseline, not a strict maximum. Ask additional questions only when material information is missing; never re-ask information already supplied. Approved 2026-11-04. |
 | R10 | Compress visually while preserving every material detail | **APPROVED — clarify priority:** First preserve factual accuracy and all material, decision-relevant information; next optimize clarity; then brevity and visual design. Peripheral/nonmaterial content may be omitted to improve brevity and presentation. If strict R03/R04 constraints conflict with preserving material information, ask the owner for a decision rather than silently omitting it. Approved 2026-11-04. |
 
-All ten policy decisions R01–R10 were approved in the owner discussion on 2026-11-04. **These are recorded decisions only; implementation in the runtime skill remains pending explicit approval of the consolidated change set.** Do not merge the draft PR before review and approval.
+All ten policy decisions R01–R10 were approved in the owner discussion on 2026-11-04. **These decisions are reflected in the draft skill files.** Keep the pull request in draft; do not merge or publish until separately authorized. R03 and R04 remain strict; material content conflicts trigger clarification.

@@ -1,59 +1,56 @@
 ---
 name: noslop
 description: >-
-  Makes or fixes Claude artifacts (updates, briefs, memos, dashboards, guides, pitches,
-  tools) so someone with zero context gets them in 5 seconds: always HTML, the form picked
-  from the reader's job, visuals instead of text, a header that says what it is, plain
-  sentences, every detail kept, and Claude's own look. Use whenever you make an artifact or
-  page someone else will read, when asked to fix, clean up or deslop one, or
-  for the web version (React site on GitHub and Vercel behind a passcode).
+  Create or improve reader-centered decision pages, reports, dashboards,
+  guides, presentations, tools and reference sheets. Choose the output format
+  requested by the user; route through the relevant workflow and load only
+  the deeper guidance needed. Use for artifact creation, repair, and web
+  implementation when requested.
 ---
 
 # No slop — Level 1 router
 
-This file is the short entry point. Load only the Level 2 workflow matched to the reader's job and the Level 3 references at their relevant stages. The original rules have been relocated, not relaxed.
+You are creating or improving an artifact for a real reader. **Load this router first. Read only the matching Level 2 workflow and the Level 3 references needed for the current step.** Never load the entire library by default.
 
-**These rules beat every design default you have,** including the suggestions of a built-in artifact type (Dashboard, Doc, Slides). Where they disagree, this skill's rules win.
+## Intake and non-negotiable decisions
 
-**Always build a plain HTML artifact.** Never a Claude Doc, a plain document or a long chat reply: those read like a message, not like something you send your boss. Don't start from a built-in artifact type either: its default layout is often the slop.
+Establish: (1) who reads it and what they already know; (2) what they must do—decide, catch up, monitor, learn, approve, use or reference; (3) one-time or recurring use. **Use facts already provided; only ask clarification questions if material information is missing.** If a five-line chat response does the job and no artifact is requested, use it.
 
-## 1. Know the reader and the job
+- **Output format (R01):** Honor the user's explicitly requested format (HTML, PDF, presentation, document, etc.). If unspecified, choose the form and delivery medium that fit the job. Ask only when the format changes the task materially. Never force HTML. If the requested format cannot be produced with available tools, say so rather than silently substituting one.
+- **Information priority (R10):** Preserve accurate, material and decision-relevant facts first; achieve clarity second; optimize brevity and visuals third. Peripheral information may be removed. Do not invent facts, baselines or functional controls.
+- **Strict layout limits (R03):** On each relevant page/screen, at most **4 sections beneath the first screen**, **5 items per card/list**, and **1 table**. Do not silently violate these limits or discard essential information: if they conflict, request an explicit resolution.
+- **Strict first-screen rule (R04):** **50–120 words**, excluding the header line, with the original reference/cheat-sheet exception. Make context, point, reasons and next action apparent without scrolling.
+- **No publishing (R08):** Never publish, deploy, push a live artifact, or expose its data without **explicit user approval** and jointly agreed security/access controls. Creating a file or working branch is not permission to publish.
 
-Before you build, you need three answers:
+## Level 2 — pick the reader's job first
 
-1. Who reads it, and what do they already know? Assume nothing.
-2. What should they do after: decide, catch up, keep checking, learn, say yes, or use it?
-3. Will they read it once, or come back to it?
-
-If the request doesn't answer them, ask as clickable questions. Ask nothing else. Then build.
-
-If it all fits in a 5-line message, say so, and write the message instead.
-
-## Level 2 — route to one task-specific workflow
-
-The job decides the form, and the form decides the layout. A report, a decision page and a guide must not share one skeleton of tiles, a box and tabs. Same Claude look, different layouts.
-
-| Reader's job | Workflow |
+| Task | Read this Markdown file |
 |---|---|
-| Decide | [Decision page](workflows/decision-page.md) |
-| Catch up | [Report](workflows/report.md) |
-| Keep checking | [Dashboard](workflows/dashboard.md) |
-| Learn/follow steps | [Step-by-step guide](workflows/step-by-step.md) |
-| Say yes | [Slides](workflows/slides.md) |
-| Use it | [Interactive tool](workflows/interactive-tool.md) |
-| Keep it | [Cheat sheet](workflows/cheat-sheet.md) |
-| Fix an artifact | [Artifact repair](workflows/artifact-repair.md) |
-| Website / GitHub / Vercel | [Web version](workflows/web-version.md) plus the relevant content workflow |
+| Decide / brief / memo | [Decision page](workflows/decision-page.md) |
+| Catch up / recurring update | [Report](workflows/report.md) |
+| Keep checking / tracking | [Dashboard](workflows/dashboard.md) |
+| Learn / follow steps | [Step-by-step guide](workflows/step-by-step.md) |
+| Say yes / pitch | [Slides](workflows/slides.md) |
+| Use it / calculate / plan | [Interactive tool](workflows/interactive-tool.md) |
+| Keep for reference | [Cheat sheet](workflows/cheat-sheet.md) |
+| Diagnose / repair artifact | [Artifact repair](workflows/artifact-repair.md), then the relevant content workflow if needed |
+| Build an actual web app | [Web implementation](workflows/web-version.md), plus the relevant content workflow |
 
-When a job mixes two, lead with the main one.
+When a task spans two forms, lead with the reader's primary job. A requested medium does not force a different reader job: for example, a decision brief can be a document or HTML.
 
-## Level 3 — read deep references at the relevant stage, not all up front
+## Level 3 — selective, step-specific reference loading
 
-| Trigger | Reference |
+| Need / stage | Read |
 |---|---|
-| Before building or rebuilding | [10 original design rules](references/design-rules.md) |
-| Before implementing HTML / visual styling | [Original style kit](references/style-kit.md) |
-| Before delivery | [Original pre-delivery checks](references/quality-checks.md) |
-| When diagnosing an artifact | [Original anti-patterns](references/slop-signs.md) |
+| Choose format when unclear or adapting layouts | [Format selection](references/format-selection.md) |
+| Before drafting substantive content | [Content integrity](references/content-integrity.md) |
+| Before visual/page layout | [Design rules](references/design-rules.md) |
+| When designing HTML/web visuals | [Style kit](references/style-kit.md) |
+| When using interactive, multilingual or RTL layouts | [Accessibility and RTL](references/accessibility.md) |
+| When diagnosing an existing artifact | [Slop signs](references/slop-signs.md) |
+| Before delivering any finished artifact | [Quality checks](references/quality-checks.md) |
+| Only when deployment is requested and approved | [Deployment and security](references/deployment-security.md) |
 
-Deferred loading does not make a mandatory rule optional. Do not change or relax the original constraints, design thresholds, repair requirements, or deployment policy. Any rule optimization is reserved for an owner-approved Phase 3.
+**R02:** Use charts, diagrams and imagery only where they improve understanding; never force a visual per section. **R05:** Two-line paragraphs and ten-word table cells are readability heuristics, not hard gates. **R06:** Claude's style is the default, overridden by explicit user or enterprise branding. **R07:** Repair or rebuild according to severity; no mandatory 50% word cut. These rules are expanded only in relevant Level 3 guidance.
+
+Execution: intake → select task and format → read relevant rules → build → verify against original material → run final checks → deliver without unauthorized publishing.
