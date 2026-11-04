@@ -32,7 +32,7 @@ def skill_metadata(text):
         raise ValueError("SKILL.md missing description")
     raw = match.group(1).strip()
     if raw.startswith(">"):
-        lines = block[match.end():].splitlines()
+        lines = block[match.end():].lstrip("\n").splitlines()
         text_lines = []
         for line in lines:
             if not line.startswith("  "):
