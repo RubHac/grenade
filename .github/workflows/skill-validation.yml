@@ -1,0 +1,28 @@
+name: Skill static validation
+on:
+  pull_request:
+    paths:
+      - "plugins/noslop/skills/noslop/**"
+      - "scripts/**"
+      - "tests/**"
+      - "evals/**"
+      - "docs/phase-3-decision-register.md"
+      - ".github/workflows/skill-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile all offline Python tools and tests
+        run: python3 -m compileall -q scripts tests
+      - name: Validate skill links, decisions, routing files and evaluation cases
+        run: python3 scripts/validate_skill.py
+      - name: Run offline unit tests
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+# No deployment, publication or secret-bearing steps.

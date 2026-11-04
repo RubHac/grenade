@@ -1,0 +1,11 @@
+# Learn or follow steps — Level 2 workflow
+
+Source: original SKILL.md §2. The content form is retained, but implement it in the user's requested output medium (R01). The presentation example below is guidance, not permission to override the user's format.
+
+| The reader needs to… | Build | It looks like |
+|---|---|---|
+| Learn or follow steps (guide, process, onboarding) | A step-by-step guide | All the steps as a visual path on top. One step per screen, with Back and Next. Each step draws what the reader will see (the screen, the button) and gives every rule, amount and deadline that applies. |
+
+Original routing principle: Reader intent determines the content form; avoid using the same generic layout for every job. Use Claude styling by default but honor explicitly requested themes (R06).
+
+Read [Content integrity](../references/content-integrity.md) when working with factual content and [Design rules](../references/design-rules.md) before visual composition. Use [Style kit](../references/style-kit.md) only for HTML/web, or the relevant medium-specific tools and theme. Always read [Quality checks](../references/quality-checks.md) before delivery. R03 and R04 remain strict; R01 gives the user control of delivery format.
